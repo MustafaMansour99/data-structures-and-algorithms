@@ -1,7 +1,8 @@
 # Linked List
 
 ## Whiteboard Process
-> - NONE
+
+![Class 06](../LL.jpg)
 
 ## Approach & Efficiency:
 ***Time --> O(1)*** 
