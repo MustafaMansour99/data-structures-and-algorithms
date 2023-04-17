@@ -36,6 +36,40 @@ def test_six(ll):
     actual = ll.includes("F")
     assert expected == actual
 
+def test_7(ll):
+    expected ="C --> B --> A --> f -->  None"
+    ll.append("f")
+    actual = str(ll)
+    assert expected == actual
+def test_8(ll):
+    expected ="C --> B --> A --> f --> g -->  None"
+    ll.append("f")
+    ll.append("g")
+    actual = str(ll)
+    assert expected == actual
+
+def test_9(ll):
+    expected = "M --> C --> B --> A -->  None"
+    ll.insert_before("C","M")
+    actual = str(ll)
+    assert expected == actual
+def test_10(ll):
+    expected = "C --> B --> M --> A -->  None"
+    ll.insert_before("A","M")
+    actual = str(ll)
+    assert expected == actual
+
+def test_11(ll):
+    expected = "C --> B --> M --> A -->  None"
+    ll.insert_after("B","M")
+    actual = str(ll)
+    assert expected == actual
+def test_11(ll):
+    expected = "C --> B --> A --> M -->  None"
+    ll.insert_after("A","M")
+    actual = str(ll)
+    assert expected == actual
+
 @pytest.fixture
 def ll():
     ll = LinkedList()
