@@ -69,6 +69,25 @@ def test_11(ll):
     ll.insert_after("A","M")
     actual = str(ll)
     assert expected == actual
+def test_12(ll):
+    expected = "the K is greater than linked list or not positive number"
+    actual = ll.kth_from_end(8)
+    assert expected == actual
+def test_13(ll):
+    expected = "B"
+    actual = ll.kth_from_end(2)
+    assert expected == actual
+def test_14(ll):
+    expected = "the K is greater than linked list or not positive number"
+    actual = ll.kth_from_end(-5)
+    assert expected == actual
+def test_14(ll):
+    expected = "A"
+    actual = ll.kth_from_end(1)
+    assert expected == actual
+
+
+
 
 @pytest.fixture
 def ll():

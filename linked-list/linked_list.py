@@ -67,6 +67,29 @@ class LinkedList:
               target = currnet 
               node.next = target.next
               target.next = node
+    def kth_from_end(self,k):
+         if self.head is None:
+            return None
+         current = self.head
+         length = 0
+         while current:
+            length += 1
+            current = current.next
+         if k > length or k < 0:
+             return "the K is greater than linked list or not positive number"
+         
+
+         pointer1 =self.head
+         pointer2 = self.head
+
+         for i in range(k):
+             pointer2 = pointer2.next
+         while pointer2 is not None:
+             pointer1 = pointer1.next
+             pointer2 = pointer2 .next
+         return pointer1.value
+    
+         
         
 
 
