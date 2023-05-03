@@ -86,8 +86,68 @@ def test_14(ll):
     actual = ll.kth_from_end(1)
     assert expected == actual
 
+def test_15():
+    ll=LinkedList()
+    ll.append("a")
+    ll.append("b")
+    ll.append("c") 
+    ll2=LinkedList()
+    ll2.append("1")
+    ll2.append("2")
+    ll2.append("3") 
+    excepted="a --> 1 --> b --> 2 --> c --> 3 -->  None"
+    actual=str(ll.zip_list(ll,ll2))
+    assert actual == excepted 
 
+def test_18():
+    ll=LinkedList()
+    ll.append("a")
+    ll.append("b")
+    ll2=LinkedList()
+    ll2.append("1")
+    ll2.append("2")
+    ll2.append("3") 
+    excepted="a --> 1 --> b --> 2 --> 3 -->  None"
+    actual= str(ll.zip_list(ll,ll2))
+    assert actual == excepted   
 
+def test_19():
+    ll=LinkedList()
+    ll.append("a")
+    ll.append("b")
+    ll.append("c") 
+    ll2=LinkedList()
+    ll2.append("1")
+    ll2.append("2")
+    excepted="a --> 1 --> b --> 2 --> c -->  None"
+    actual=str(ll.zip_list(ll,ll2))
+    assert actual == excepted 
+
+def test_20():
+    ll=LinkedList()
+    ll.append("a")
+    ll.append("b")
+    ll.append("c") 
+    ll2=LinkedList()
+    excepted="a --> b --> c -->  None"
+    actual=str(ll.zip_list(ll,ll2))
+    assert actual == excepted
+
+def test_20():
+    ll=LinkedList() 
+    ll2=LinkedList()
+    ll2.append("1")
+    ll2.append("2")
+    excepted="1 --> 2 -->  None"
+    actual=str(ll.zip_list(ll,ll2))
+    assert actual == excepted
+
+def test_22():
+    ll=LinkedList() 
+    ll2=LinkedList()
+    excepted="Both Linkedlists are empty"
+    actual=str(ll.zip_list(ll,ll2))
+    assert actual == excepted
 
 @pytest.fixture
 def ll():
