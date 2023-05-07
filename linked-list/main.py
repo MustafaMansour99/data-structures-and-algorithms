@@ -10,9 +10,11 @@ if __name__ == "__main__":
     linked_list1.append("f")
     linked_list1.append("g")
     linked_list1.insert_after("A","M")
-    print(linked_list1.kth_from_end(-8))
+
+    linked_list1.reverse_linked_list()
+    # print(linked_list1.kth_from_end(-8))
 
     
     print(linked_list1)
 
-    print(linked_list1.includes("A"))
+    # print(linked_list1.includes("A"))
