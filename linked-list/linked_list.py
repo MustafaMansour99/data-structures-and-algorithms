@@ -120,11 +120,18 @@ class LinkedList:
                     current_2=current_2.next
 
 
-        return list1 
-    
-         
-        
-
+        return list1
+    def reverse_linked_list(self):
+        """this function takes a linked list and reverses it"""
+        current = self.head
+        previous = None
+        while current:
+            temp = current.next
+            current.next = previous
+            previous = current
+            current = temp
+            self.head = previous
+        return self.head
 
     def __str__(self):
         output = ""
