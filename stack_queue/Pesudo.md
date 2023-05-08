@@ -2,17 +2,17 @@
 
 ## Whiteboard Process
 
-![Class 11](../pesudo.jpg)
+![Class 10](../push.chall_10.jpg)
 
 ## Approach & Efficiency:
 ***Time --> O(1)*** 
 ---
 
-***space -->O(n)*** 
+***space -->O(1)*** 
 ---
 
 ---
 
 ## Solution
 
-[Pesudo](./Pseudo_Queue.py)
+[push](./Stack.py)
