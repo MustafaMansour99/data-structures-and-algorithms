@@ -1,13 +1,15 @@
 from stack_queue.Queue import Queue
 from stack_queue.Stack import Stack
 from stack_queue.Pseudo_Queue import pseudo_queue
+from stack_queue.stack_queue_brackets import validate_brackets
 
-q = pseudo_queue()
-q.enQueue(1) 
-q.enQueue(2) 
-q.enQueue(3)
-print(q.deQueue()) 
-print(q)
+
+# q = pseudo_queue()
+# q.enQueue(1) 
+# q.enQueue(2) 
+# q.enQueue(3)
+# print(q.deQueue()) 
+# print(q)
 # print(q.deQueue())
 # print(q.deQueue())
 # print(q.deQueue())
@@ -46,3 +48,7 @@ print(q)
 #     print(err)
 
 # print(stack1.isEmpty())
+string = "{[()]}"
+result = validate_brackets(string)
+print(f"String: {string}")
+print(f"Result: {result}")

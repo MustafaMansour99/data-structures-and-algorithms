@@ -7,5 +7,6 @@
 | Class 03   | [Class 03](./codeChallenge3.md)  |
 | LinkedList   | [linkedlist](./linked-list/README.MD)  |
 | Append   | [Append](./Readme.append/README.MD)  |
+| stack_brackets   | [stack_brackets](./stack_queue/brackets.md)  |
 
 
