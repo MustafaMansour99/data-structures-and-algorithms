@@ -1,7 +1,9 @@
 from stack_queue.Node import Node
 class Stack:
+
     def __init__(self):
         self.top = None
+        self.size = 0
     """
     this function work to add the value to the Stack 
     """
@@ -10,6 +12,7 @@ class Stack:
         if self.top:
             node.next=self.top
         self.top=node
+        self.size+=1
     """
     this function to delete element from the Stack
     """
@@ -19,10 +22,15 @@ class Stack:
          
          temp=self.top
          self.top=self.top.next
+         self.size-=1
          return temp.value
     """
     to print the Stack 
     """
+
+    def get_size(self):
+        return self.size
+        
     def __str__(self):
 
         output = ""
@@ -52,5 +60,6 @@ class Stack:
     this function to check if the queue is empty or not and return true or false
     """
     def isEmpty(self):
-        return self.top == None
+        # return self.top == None
+        return self.size == 0
 
