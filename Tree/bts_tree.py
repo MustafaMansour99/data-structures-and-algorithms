@@ -29,6 +29,30 @@ class BinaryTree:
         left_values = self.traverse_preorder(node.left)
         right_values = self.traverse_preorder(node.right)
         return  left_values + right_values + [node.value]
+    
+    """
+    this function returns the maximum value in binary tree
+    """
+
+    def find_maximum_value(self):
+        if self.root is None:
+            return "Tree is Empty!!"
+        return self._find_maximum_value_helper(self.root)
+    def _find_maximum_value_helper(self, node):
+        if node is None:
+            return None
+        max_value = node.value
+        left_max = self._find_maximum_value_helper(node.left)
+        if left_max is not None and left_max > max_value:
+            max_value = left_max
+        right_max = self._find_maximum_value_helper(node.right)
+        if right_max is not None and right_max > max_value:
+            max_value = right_max
+
+        return max_value
+        
+    
+        
 "this class for serach in tree using binary search tree and check if value bigger than node add to right of the node and if it smaller add to the left side of the node and have a function to check if the value is inside in tree or not "
 class BinarySearchTree(BinaryTree):
     def is_empty(self):
@@ -66,15 +90,16 @@ bst = BinarySearchTree()
 bst.add(5)
 bst.add(2)
 bst.add(1)
-# bst.add(2)
-# bst.add(7)
-# bst.add(1)
-# bst.add(3)
-# bst.add(6)
-# bst.add(8)
-# bst.add(10)
-# bst.add(4)
+bst.add(2)
+bst.add(7)
+bst.add(1)
+bst.add(3)
+bst.add(6)
+bst.add(8)
+bst.add(10)
+bst.add(4)
 print(bst.traverse_postorder(bst.root))
 print(bst.contains(7))
-
+max_value =bst.find_maximum_value()
+print("Maximum value:", max_value)
 
