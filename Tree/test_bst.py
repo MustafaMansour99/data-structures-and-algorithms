@@ -63,7 +63,7 @@ def test_8():
     actual = bst.contains(7)
     assert expected == actual
 
-def test_6():
+def test_9():
     "Can successfully add child left and right"
     bst = BinarySearchTree()
     bst.add(5)
@@ -71,4 +71,32 @@ def test_6():
     bst.add(6)
     expected =[2, 6, 5]
     actual = bst.traverse_postorder(bst.root)
+    assert expected == actual
+
+def test_10():
+    "can successfully find the maximum value in binary tree"
+    bst = BinarySearchTree()
+    bst.add(5)
+    bst.add(2)
+    bst.add(1)
+    bst.add(6)
+    bst.add(7)
+    bst.add(3)
+    bst.add(4)
+    bst.add(8)  
+    bst.add(9)
+    bst.add(10)
+    expected = 10
+    actual = bst.find_maximum_value()
+    assert expected == actual
+
+def test_11():
+    bst=BinarySearchTree()
+    bst.add(5)
+    bst.add(90)
+    bst.add(55)
+    bst.add(25)
+    bst.add(63)
+    expected = 90
+    actual = bst.find_maximum_value()
     assert expected == actual
