@@ -1,3 +1,4 @@
+from stack_queue.Queue import Queue
 class Node:
     def __init__(self, value):
         self.value = value
@@ -50,6 +51,23 @@ class BinaryTree:
             max_value = right_max
 
         return max_value
+    
+    def breadth_first(self,node):
+        queue= Queue()
+        list_breadth = []
+        
+        if node is None :
+            return "Tree is empty"
+        else:
+            queue.enqueue(node)
+        while queue.head:
+            node = queue.dequeue()
+            list_breadth.append(node.value)
+            if node.left :
+                queue.enqueue(node.left)
+            if node.right:
+                queue.enqueue(node.right)    
+        return list_breadth
         
     
         
@@ -87,19 +105,24 @@ class BinarySearchTree(BinaryTree):
 
 
 bst = BinarySearchTree()
-bst.add(5)
-bst.add(2)
-bst.add(1)
-bst.add(2)
-bst.add(7)
-bst.add(1)
-bst.add(3)
-bst.add(6)
-bst.add(8)
-bst.add(10)
-bst.add(4)
-print(bst.traverse_postorder(bst.root))
-print(bst.contains(7))
-max_value =bst.find_maximum_value()
-print("Maximum value:", max_value)
-
+# bst.add(5)
+# bst.add(2)
+# bst.add(1)
+# bst.add(2)
+# bst.add(7)
+# bst.add(1)
+# bst.add(3)
+# bst.add(6)
+# bst.add(8)
+# bst.add(10)
+# bst.add(4)
+# bst.add(10)
+# bst.add(40)
+# bst.add(30)
+# bst.add(25)
+# bst.add(50)
+# print(bst.traverse_postorder(bst.root))
+# print(bst.contains(7))
+# max_value =bst.find_maximum_value()
+# print("Maximum value:", max_value)
+print(bst.breadth_first(bst.root))
