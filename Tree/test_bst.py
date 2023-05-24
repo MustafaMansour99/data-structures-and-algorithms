@@ -100,3 +100,26 @@ def test_11():
     expected = 90
     actual = bst.find_maximum_value()
     assert expected == actual
+"""
+breadth first serch
+"""
+def test_12():
+    bst=BinarySearchTree()
+    bst.add(10)
+    bst.add(40)
+    bst.add(30)
+    bst.add(25)
+    bst.add(50)
+    expected = [10, 40, 30, 50, 25]
+    actual = bst.breadth_first(bst.root)
+    assert expected == actual
+"""
+check if the breadth first tree is empty 
+"""
+def test_13():
+    bst=BinarySearchTree()
+    expected="Tree is empty"
+    actual = bst.breadth_first(bst.root)
+    assert expected == actual
+
+    
