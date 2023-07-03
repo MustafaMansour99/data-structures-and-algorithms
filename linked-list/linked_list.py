@@ -120,6 +120,8 @@ class LinkedList:
                     list1.append(current_2.value)
                     current_2=current_2.next
                     
+        return list1
+                    
     # def delete_node(self,key):
 
     #     temp = self.head
@@ -165,18 +167,18 @@ class LinkedList:
     #         self.head = previous
     #     return self.head
 
-    # def __str__(self):
-    #     output = ""
-    #     if self.head is None:
-    #         output = "Empty LinkeList"
-    #     else:
-    #         current = self.head
-    #         while(current):
-    #             output += f'{current.value} --> '
-    #             current = current.next
+    def __str__(self):
+        output = ""
+        if self.head is None:
+            output = "Empty LinkeList"
+        else:
+            current = self.head
+            while(current):
+                output += f'{current.value} --> '
+                current = current.next
             
-    #         output += " None"
-    #     return output
+            output += " None"
+        return output
     # def remove_dublicate_sort_linkedlist(self):
     #     # this method removes the dublicates in sorted order 
     #     # cur=self.head
@@ -203,4 +205,3 @@ class LinkedList:
     
 
 
-        
