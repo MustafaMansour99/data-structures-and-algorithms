@@ -8,5 +8,6 @@
 | LinkedList   | [linkedlist](./linked-list/README.MD)  |
 | Append   | [Append](./Readme.append/README.MD)  |
 | stack_brackets   | [stack_brackets](./stack_queue/brackets.md)  |
+| repeated_word   | [repeated_word](./stack_queue/brackets.md)  |
 
 
