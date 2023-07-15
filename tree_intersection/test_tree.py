@@ -1,9 +1,7 @@
 import pytest
-from tree_intersection import tree_intersection
+from tree_intersection.tree_intersection import tree_intersection
 from Tree.Node import Node
 from Tree.Tree import Tree
-
-
 @pytest.fixture
 def setup_trees():
     node1 = Node(1)
@@ -31,6 +29,7 @@ def setup_trees():
     second_tree.root = node_10
     
     return first_tree, second_tree
+
 def test_1(setup_trees):
     first_tree, second_tree = setup_trees
     assert [2, 5] == tree_intersection(first_tree, second_tree)
