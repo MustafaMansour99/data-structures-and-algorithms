@@ -32,7 +32,7 @@ def setup_trees():
 
 def test_1(setup_trees):
     first_tree, second_tree = setup_trees
-    assert [2, 5] == tree_intersection(first_tree, second_tree)
+    assert {2, 5} == tree_intersection(first_tree, second_tree)
 
 def test_2(setup_trees):
     first_tree, second_tree = setup_trees
@@ -47,4 +47,4 @@ def test_3(setup_trees):
     node_15.right = node_8
     third_tree = Tree()
     third_tree.root = node_15
-    assert [5] == tree_intersection(second_tree, third_tree)
+    assert {5} == tree_intersection(second_tree, third_tree)

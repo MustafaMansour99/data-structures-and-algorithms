@@ -10,5 +10,6 @@
 | stack_brackets   | [stack_brackets](./stack_queue/brackets.md)  |
 | repeated_word   | [repeated_word](./stack_queue/brackets.md)  |
 | left join   | [left join](./Left_Join/LEFT_JOIN.MD)  |
+| Graph   | [Graph](./Left_Join/LEFT_JOIN.MD)  |
 
 
