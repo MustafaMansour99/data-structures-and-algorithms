@@ -1,4 +1,5 @@
 from graph.node import Node
+from stack_queue.Queue import Queue
 
 class Edge:
     def __init__(self,vertex, weight=0):
@@ -55,6 +56,31 @@ class Graph:
         if self.adj_list is None:
             return 0
         return self.size
+    
+    def breadth_first(self, node):
+        #Implement a breadth-first traversal on a graph.
+        if node not in self.adj_list:
+            return []
+        visited = []
+        queue = Queue()
+        result = []  # Create a list to store the visited nodes in order
+       
+        visited.append(node)
+        queue.enqueue(node)
+       
+       
+        while not queue.isEmpty():  # Check if the queue is empty
+            m = queue.dequeue()
+            result.append(m.value)
+            # if m not in visited:
+            #     visited.append(m)
+            #     result.append(m)  # Append the current node to the result list
+            for edge in self.adj_list[m]:
+              if edge.vertex not in visited:
+                    queue.enqueue(edge.vertex)
+                    visited.append(edge.vertex)
+       
+        return result
         
     def __str__(self):
         output = ''
