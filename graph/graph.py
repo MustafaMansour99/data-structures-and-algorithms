@@ -1,5 +1,6 @@
 from graph.node import Node
 from stack_queue.Queue import Queue
+from stack_queue.Stack import Stack
 
 class Edge:
     def __init__(self,vertex, weight=0):
@@ -81,6 +82,25 @@ class Graph:
                     visited.append(edge.vertex)
        
         return result
+    def Depth_first(self,node):
+        if node not in self.adj_list:
+            return []
+        visited = []
+        stack=Stack()
+        result=[]
+        stack.push(node)
+        visited.append(node)
+        while not stack.isEmpty():  # Check if the stack is empty
+            n=stack.pop()
+            result.append(n.value)
+            for i in self.adj_list[n]:
+                if i.vertex not in visited:
+                    stack.push(i.vertex)
+                    visited.append(i.vertex)
+        return result
+
+
+
         
     def __str__(self):
         output = ''
