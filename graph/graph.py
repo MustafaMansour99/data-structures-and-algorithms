@@ -98,10 +98,28 @@ class Graph:
                     stack.push(i.vertex)
                     visited.append(i.vertex)
         return result
+    # implementation using adjacency
+    def create_adjacency_list(self,vertices, edges):
+        adjacency_list = {}
+        for i in range(len(vertices)):
+            vertex = vertices[i]
+            neighbors = []
+            for j in range(len(vertices)):
+                if edges[i][j]:
+                    neighbors.append(vertices[j])
+            adjacency_list[vertex] = neighbors
+        return adjacency_list
+    
+    def business_trip(graph, cities):
+        total_cost = 0
+        for i in range(len(cities) - 1):
+            current_city = cities[i]
+            next_city = cities[i + 1]
+            if current_city not in graph or next_city not in graph[current_city]:
+                return None
+            total_cost+=graph[current_city][next_city]
+        return total_cost
 
-
-
-        
     def __str__(self):
         output = ''
         for vertex in self.adj_list.keys():
@@ -110,4 +128,5 @@ class Graph:
                 output += f'{edge.vertex} -----> '
             output += '\n'
         return output
+
 
