@@ -37,5 +37,13 @@ graph1.add_edge(f,h)
 # print(graph1.vertices())
 # print(graph1.breadth_first(d))
 print(graph1.Depth_first(a))
+vertices = ["a", "b", "c", "d", "e"]
+edges = [
+        [False, True, False, False, True],
+        [True, False, True, True, False],
+        [False, True, False, True, False],
+        [False, True, True, False, True],
+        [True, False, False, True, False],
+    ]
+print(graph1.create_adjacency_list(vertices,edges))
 
-print(graph1)
